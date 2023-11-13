@@ -4,6 +4,21 @@ let inputDuracao = document.getElementById("duracao");
 
 let resultado = document.getElementById("resultado");
 
+function carnePP(duracao){
+    if(duracao >= 6){
+        return 650;
+    }else{
+        return 400;
+    }
+}
+
+function cervejaPP(duracao){
+    if(duracao >= 6){
+        return 2000;
+    }else{
+        return 1200;
+    }
+}
 function calcular(){
     console.log("calculando...");
      
@@ -20,18 +35,3 @@ function calcular(){
     resultado.innerHTML += `<p>${Math.ceil(qdtTotalBebidas/2000)}ml de bebidas</p>`
 }
 
-function carnePP(duracao){
-    if(duracao >= 6){
-        return 650;
-    }else{
-        return 400;
-    }
-}
-
-function cervejaPP(duracao){
-    if(duracao >= 6){
-        return 2000;
-    }else{
-        return 1200;
-    }
-}
